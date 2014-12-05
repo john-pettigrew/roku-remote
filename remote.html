@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html style="background-color:aqua;">
+  <head>
+    <link type="text/css" rel="stylesheet" href="bower_components/materialize/bin/materialize.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="style/style.css" media="screen,projection"/>
+  </head>
+  <body>
+    <h3 style="font-size:44px; text-align:center;">John's Roku Remote</h3>
+    <div class="row">
+      <div class=" col s1 offset-s5">
+        <a class="btn-floating" id="home-button"><i style="text-align:center; color: black;" class="mdi-action-home"></i></a>
+      </div>
+    </div>
+    <div class="row">
+      <h3 class="mdi-hardware-keyboard-arrow-up waves-effect waves-light btn up-arrow col s4 offset-s4"></h3>
+    </div>
+    <div class="row">
+      <h3 style="" class="mdi-hardware-keyboard-arrow-left waves-effect waves-light btn col s4" id="left-button"></h3>
+      <h3 class="waves-effect waves-light btn col s4" id="select-button" style="font-size:large;">Select</h3>
+      <h3 class="mdi-hardware-keyboard-arrow-right waves-effect waves-light btn right-align col s4" id="right-button"></h3>
+    </div>
+    <div class="row">
+      <h3 style="text-align:center;" class="mdi-hardware-keyboard-arrow-down waves-effect waves-light btn col s4 offset-s4 down-arrow" id="down-button"></h3>
+    </div>
+    <div class="input-field col s12" type="text">
+      <input id="address" style="text-align: center; font-size: 32px;" type="text"></input>
+      <label for="address">Ip Address</label>
+    </div>
+    <ul id="channel-list"></ul>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/materialize/bin/materialize.js"></script>
+    <script src="javascripts/controller.js"></script>
+  </body>
+</html>

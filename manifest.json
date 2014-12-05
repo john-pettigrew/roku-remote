@@ -1,0 +1,12 @@
+{
+  "name": "John's Roku Remote",
+  "description": "Remote for Roku player",
+  "version": "0.1",
+  "manifest_version": 2,
+  "permissions": ["http://*/"],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
