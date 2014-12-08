@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="background-color:aqua;">
+<html>
   <head>
     <link type="text/css" rel="stylesheet" href="bower_components/materialize/bin/materialize.css" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="style/style.css" media="screen,projection"/>
@@ -14,7 +14,7 @@
     <div id="remote">
       <h3 style="font-size:44px; text-align:center;">John's Roku Remote</h3>
       <div class="row">
-        <div class=" col s1 offset-s5">
+        <div class=" col s4 offset-s4">
           <a class="btn-floating" id="home-button"><i style="text-align:center; color: black;" class="mdi-action-home"></i></a>
         </div>
       </div>
@@ -30,8 +30,8 @@
         <h3 style="text-align:center;" class="mdi-hardware-keyboard-arrow-down waves-effect waves-light btn col s4 offset-s4 down-arrow" id="down-button"></h3>
       </div>
       <div class="input-field col s12" type="text">
-        <input id="address" style="text-align: center; font-size: 32px;" type="text"></input>
-        <label for="address">Ip Address</label>
+        <input id="address" type="text"></input>
+        <label for="address" id="address-label">Ip Address</label>
       </div>
     </div>
     <div id="applications">

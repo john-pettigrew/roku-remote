@@ -1,0 +1,28 @@
+html{
+  background-color: #688AB0;
+}
+#home-button{
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+#address{
+  border-bottom: 1px solid #7DBCDF;
+  box-shadow: 0 1px 0 0 #7DBCDF;
+  text-align: center;
+  font-size: 32px;
+}
+#address-label, #address-label.active{
+  color: #2C405B;
+}
+.btn, .btn-floating{
+  background-color: #7DBCDF;
+  color: #000000;
+}
+.tabs, .tab a{
+  background-color: #D1DBE5;
+  color: #2C405B !important;
+}
+.indicator{
+  background-color: #2C405B !important;
+}

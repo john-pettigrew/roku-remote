@@ -3,7 +3,10 @@
   "description": "Remote for Roku player",
   "version": "0.1",
   "manifest_version": 2,
-  "permissions": ["http://*/"],
+  "permissions": [
+    "http://*/",
+    "storage"
+    ],
   "app": {
     "background": {
       "scripts": ["background.js"]
