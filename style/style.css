@@ -1,5 +1,14 @@
 html{
   background-color: #688AB0;
+  overflow-y:auto;
+}
+#address{
+  font-weight: 200;
+  font-family: "Roboto";
+}
+#address-label{
+  font-weight: 300;
+  font-family: "Roboto";
 }
 #home-button{
   margin-left:auto;
@@ -14,6 +23,26 @@ html{
 }
 #address-label, #address-label.active{
   color: #2C405B;
+}
+.channel-item{
+  font-weight: 200;
+  font-family: "Roboto";
+  font-size: 32px;
+  text-align: right;
+  border-top: 1px solid #7DBCDF;
+  padding-top: 2px;
+}
+.channel-item img{
+  height: 200px;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+.title{
+  font-size:44px;
+  text-align:center;
+  font-weight: 300;
+  font-family: "Roboto";
 }
 .btn, .btn-floating{
   background-color: #7DBCDF;
