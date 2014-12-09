@@ -55,3 +55,18 @@ html{
 .indicator{
   background-color: #2C405B !important;
 }
+.channel-pressed{
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: blink;
+}
+@-webkit-keyframes blink{
+  0%{
+    background-color: #688AB0;
+  }
+  50%{
+    background-color: #D1DBE5;
+  }
+  100%{
+    background-color: #688AB0;
+  }
+}

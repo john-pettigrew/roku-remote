@@ -55,6 +55,7 @@ $(document).ready(function(){
   //Save the IP address when the user is done entering it.
   $('#address').focusout(function(){
     chrome.storage.local.set({'remoteIpAddress': $('#address').val()});
+    getChannels();
   });
 
   //setup tabs
@@ -71,6 +72,7 @@ $(document).ready(function(){
 
   //get channel list
   var getChannels = function(){
+    $('#channel-list').html('');
     var goToChannel = function(id){
         /*
           Function to switch channels based on given id
@@ -97,7 +99,13 @@ $(document).ready(function(){
             count++;
             if(count === appsArray.length){
               $('.channel-item').on('click', function(e){
-                goToChannel(e.target.attributes.channelid.value);
+                var id = e.target.attributes.channelid.value;
+                //add animation
+                $('.channel-item[channelid="'+id+'"]').addClass('channel-pressed');
+                $('.channel-item[channelid="'+id+'"]').one('webkitAnimationEnd', function(){
+                  $('.channel-item[channelid="'+id+'"]').removeClass('channel-pressed');
+                })
+                goToChannel(id);
               });
             }
           };
