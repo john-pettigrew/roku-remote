@@ -48,6 +48,25 @@ $(document).ready(function(){
         case 40:
           buttonPress('down');
           break;
+        case 8:
+          buttonPress('Backspace');
+          break;
+        case 46:
+          buttonPress('Backspace');
+          break;
+        case 32:
+          buttonPress("Lit_%20");
+          break;
+        case 27:
+          buttonPress('Back');
+          break;
+        }
+
+      var shifted = e.shiftKey;
+
+      if (65 <= e.which && e.which <= 90){
+        var letter = shifted ? String.fromCharCode(e.which) : String.fromCharCode(e.which).toLowerCase(); 
+        buttonPress("Lit_" + letter);
       }
     }
   });
