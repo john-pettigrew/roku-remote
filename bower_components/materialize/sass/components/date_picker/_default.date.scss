@@ -30,10 +30,10 @@
  */
 .picker__select--month,
 .picker__select--year {
-  
+
 
 //  border: 1px solid #b7b7b7;
-  
+
   height: 2em;
   padding: .5em;
   margin-left: .25em;
@@ -45,15 +45,20 @@
     margin-top: -0.5em;
   }
 }
-.picker__select--month {
-  width: 35%;
+// Modified
+.picker__select--month.browser-default {
+  display: inline;
+  background-color: #FFFFFF;
+  width: 40%;
 }
-.picker__select--year {
-  width: 22.5%;
+.picker__select--year.browser-default {
+  display: inline;
+  background-color: #FFFFFF;
+  width: 25%;
 }
 .picker__select--month:focus,
 .picker__select--year:focus {
-  border-color: #0089ec;
+  border-color: $datepicker-focus;
 }
 /**
  * The month navigation buttons.
@@ -92,12 +97,6 @@
 //  }
 //}
 
-.picker__nav--prev:hover,
-.picker__nav--next:hover {
-  cursor: pointer;
-  color: #000000;
-  background: #b1dcfb;
-}
 .picker__nav--disabled,
 .picker__nav--disabled:hover,
 .picker__nav--disabled:before,
@@ -163,7 +162,7 @@
   padding: .75rem 0;
   font-weight: 400;
   border: 1px solid transparent;
-  
+
 }
 
 //.picker__day--today:before {
@@ -189,7 +188,10 @@
 }
 
 .picker__day--outfocus {
+
+  padding: .75rem 0;
   color: #fff;
+
 }
 .picker__day--outfocus:hover {
   cursor: pointer;
@@ -205,7 +207,7 @@
 .picker__day--highlighted:hover,
 .picker--focused .picker__day--highlighted {
   cursor: pointer;
-  color: #000000;
+//  color: #000000;
 //  background: #b1dcfb;
 //  font-weight: 500;
 }
@@ -213,12 +215,10 @@
 .picker__day--selected:hover,
 .picker--focused .picker__day--selected {
 
-  
+
 //  Circle background
    border-radius: 50%;
   @include transform(scale(.75));
-  
-  
   background: #0089ec;
   color: #ffffff;
 }
@@ -239,6 +239,9 @@
  */
 .picker__footer {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .picker__button--today,
 .picker__button--clear,
@@ -264,7 +267,7 @@
 .picker__button--clear:focus,
 .picker__button--close:focus {
   background: #b1dcfb;
-  border-color: #0089ec;
+  border-color: $datepicker-focus;
   outline: none;
 }
 .picker__button--today:before,
@@ -319,14 +322,21 @@
 
 .picker__date-display {
   text-align: center;
-  background-color: color("teal", "lighten-1");
+  background-color: $datepicker-date-bg;
   color: #fff;
   padding-bottom: 15px;
   font-weight: 300;
 }
 
+.picker__nav--prev:hover,
+.picker__nav--next:hover {
+  cursor: pointer;
+  color: #000000;
+  background: $datepicker-selected-outfocus;
+}
+
 .picker__weekday-display {
-  background-color: color("teal", "darken-1");
+  background-color: $datepicker-weekday-bg;
   padding: 10px;
   font-weight: 200;
   letter-spacing: .5;
@@ -341,11 +351,11 @@
 .picker__day-display {
 
   font-size: 4.5rem;
-  font-weight: 400; 
+  font-weight: 400;
 }
 .picker__year-display {
   font-size: 1.8rem;
-  color: color("teal", "lighten-3");
+  color: $datepicker-year;
 }
 
 .picker__box {
@@ -353,7 +363,7 @@
 }
 .picker__calendar-container {
   padding: 0 1rem;
-  
+
   thead {
     border: none;
   }
@@ -374,8 +384,12 @@
 }
 
 //Today style
-.picker--focused .picker__day--highlighted {
-  color: color("teal", "lighten-1");
+.picker__day.picker__day--today {
+  color: $datepicker-selected;
+}
+
+.picker__day.picker__day--today.picker__day--selected {
+  color: #fff;
 }
 
 // Table Header
@@ -384,11 +398,16 @@
 }
 
 
+.picker__day--selected,
+.picker__day--selected:hover,
 .picker--focused .picker__day--selected {
   // Circle background
   border-radius: 50%;
   @include transform(scale(.9));
-  background-color: color("teal", "base");
+  background-color: $datepicker-selected;
+  &.picker__day--outfocus {
+    background-color: $datepicker-selected-outfocus;
+  }
   color: #ffffff;
 }
 
@@ -397,9 +416,11 @@
   padding: 5px 10px;
 }
 
+// Materialize modified
 .picker__close, .picker__today {
   font-size: 1.1rem;
-  color: color("teal", "lighten-1");
+  padding: 0 1rem;
+  color: $datepicker-selected;
 }
 
 //month nav buttons
@@ -417,4 +438,7 @@
 .picker__nav--next:before {
   border-right: 0;
   border-left: 0.75em solid #676767;
+}
+button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
+  background-color: $datepicker-selected-outfocus;
 }
