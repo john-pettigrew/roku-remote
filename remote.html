@@ -15,21 +15,29 @@
     <div id="remote" class="container">
       <h3 class="title">John's Roku Remote</h3>
       <div class="row">
-        <div class=" col s4 offset-s4">
-          <a class="btn-floating z-depth-3" id="home-button"><i style="text-align:center; color: black;" class="mdi-action-home"></i></a>
+        <div class=" col s4">
+           <a class="waves-effect waves-light btn-floating z-depth-3" id="back-button"><i style="text-align:center; color: black;" class="mdi-navigation-arrow-back"></i></a>
+        </div>
+        <div class=" col s4">
+          <a class="waves-effect waves-light btn-floating z-depth-3" id="home-button"><i style="text-align:center; color: black;" class="mdi-action-home"></i></a>
+        </div>
+        <div class=" col s4">
+           <a class="waves-effect waves-light btn-floating z-depth-3" id="menu-button"><i style="text-align:center; color: black;" class="mdi-navigation-more-vert"></i></a>
         </div>
       </div>
 
       <div class="row">
-        <h3 id="up-button" class="mdi-hardware-keyboard-arrow-up waves-effect waves-light btn up-arrow col s4 offset-s4 z-depth-3"></h3>
+        <h3 id="up-button" class="mdi-hardware-keyboard-arrow-up waves-effect waves-light btn up-arrow col s4 offset-s4 z-depth-2"></h3>
       </div>
       <div class="row">
-        <h3 style="" class="mdi-hardware-keyboard-arrow-left waves-effect waves-light btn col s4 z-depth-3" id="left-button"></h3>
-        <h3 class="waves-effect waves-light btn col s4 z-depth-3" id="select-button" style="font-size:large;">Select</h3>
-        <h3 class="mdi-hardware-keyboard-arrow-right waves-effect waves-light btn right-align col s4 z-depth-3" id="right-button"></h3>
+        <h3 class="mdi-hardware-keyboard-arrow-left waves-effect waves-light btn col s3 z-depth-2" id="left-button"></h3>
+        <div class="col s1"><p></p></div>
+        <h3 class="waves-effect waves-light btn col s4 z-depth-2" id="select-button" style="font-size:x-large; font-weight: 600;">&#x25EF;</h3>
+        <div class="col s1"><p></p></div>
+        <h3 class="mdi-hardware-keyboard-arrow-right waves-effect waves-light btn right-align col s3 z-depth-2" id="right-button"></h3>
       </div>
       <div class="row">
-        <h3 style="text-align:center;" class="mdi-hardware-keyboard-arrow-down waves-effect waves-light btn col s4 offset-s4 down-arrow z-depth-3" id="down-button"></h3>
+        <h3 style="text-align:center;" class="mdi-hardware-keyboard-arrow-down waves-effect waves-light btn col s4 offset-s4 down-arrow z-depth-2" id="down-button"></h3>
       </div>
       <div class="input-field col s12" type="text">
         <input id="address" type="text"></input>

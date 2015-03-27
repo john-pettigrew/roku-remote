@@ -30,6 +30,14 @@ $(document).ready(function(){
     e.preventDefault();
     buttonPress('home');
   });
+  $('#back-button').on('click', function(e){
+    e.preventDefault();
+    buttonPress('Back');
+  });
+  $('#menu-button').on('click', function(e){
+    e.preventDefault();
+    buttonPress('Info');
+  });
   $('html').keydown(function(e){
     if(!$('#address').is(':focus')){
       switch(e.which){
