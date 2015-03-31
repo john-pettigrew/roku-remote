@@ -10,17 +10,7 @@ html{
   font-weight: 300;
   font-family: "Roboto";
 }
-#home-button{
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
-}
-#back-button{
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
-}
-#menu-button{
+#home-button,#back-button,#menu-button,#rewind-button,#play-button,#forward-button{
   margin-left:auto;
   margin-right:auto;
   display:block;
