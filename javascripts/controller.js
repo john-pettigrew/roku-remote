@@ -38,6 +38,19 @@ $(document).ready(function(){
     e.preventDefault();
     buttonPress('Info');
   });
+  $('#play-button').on('click', function(e){
+    e.preventDefault();
+    buttonPress('Play');
+  });
+  $('#rewind-button').on('click', function(e){
+    e.preventDefault();
+    buttonPress('Rev');
+  });
+  $('#forward-button').on('click', function(e){
+    e.preventDefault();
+    buttonPress('Fwd');
+  });
+
   $('html').keydown(function(e){
     if(!$('#address').is(':focus')){
       switch(e.which){
@@ -73,7 +86,7 @@ $(document).ready(function(){
       var shifted = e.shiftKey;
 
       if (65 <= e.which && e.which <= 90){
-        var letter = shifted ? String.fromCharCode(e.which) : String.fromCharCode(e.which).toLowerCase(); 
+        var letter = shifted ? String.fromCharCode(e.which) : String.fromCharCode(e.which).toLowerCase();
         buttonPress("Lit_" + letter);
       }
     }

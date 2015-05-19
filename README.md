@@ -1,4 +1,4 @@
-# Roku Remote
+# YARR (Yet Another Roku Remote)
 
 ![](screenshot.png)
 
