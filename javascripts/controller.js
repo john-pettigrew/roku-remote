@@ -1,8 +1,8 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
   var buttonPress = function(button){
     /*
       Function to send command to Roku device.
-    */
+    *//*
     var ipAddress = $('#address').val();
     $.post('http://'+ipAddress+':8060/keypress/'+button, function(){})
     .fail(function(){
@@ -116,7 +116,7 @@ $(document).ready(function(){
     var goToChannel = function(id){
         /*
           Function to switch channels based on given id
-        */
+        *//*
         var ipAddress = $('#address').val();
         $.post('http://'+ipAddress+':8060/launch/'+id, function(){})
         .fail(function(){
@@ -160,3 +160,11 @@ $(document).ready(function(){
   }
 
 });
+*/
+angular.module('YARR', ['ngMaterial'])
+.controller('remoteController', ['$scope', function($scope){
+
+}])
+.controller('applicationsController', ['$scope', function($scope){
+
+}]);

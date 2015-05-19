@@ -1,69 +1,76 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
-    <link type="text/css" rel="stylesheet" href="bower_components/materialize/bin/materialize.css" media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="style/style.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" media="screen,projection"
+    />
+    <link type="text/css" rel="stylesheet" href="style/style.css" media="screen,projection" />
   </head>
-  <body>
-
-    <div class="col s12">
-      <ul class="tabs">
-        <li class="tab col s6"><a href="#remote">remote</a></li>
-        <li class="tab col s6"><a href="#applications">applications</a></li>
-      </ul>
+  
+  <body layout="column">
+    <div data-ng-app="YARR">
+      <md-tabs md-stretch-tabs="always">
+        <md-tab>
+          <md-tab-label>Remote</md-tab-label>
+        </md-tab>
+        <md-tab>
+          <md-tab-label>Applications</md-tab-label>
+        </md-tab>
+      </md-tabs>
+      <div id="remote" class="container" data-ng-controller="remoteController">
+        <h3 class="title">YARR</h3>
+        <div class="row">
+          <div class=" col s4">
+            <a class="waves-effect waves-light btn btn-floating z-depth-3" id="back-button"><i style="text-align:center; color: black;" class="mdi-navigation-arrow-back"></i></a>
+          </div>
+          <div class=" col s4">
+            <a class="waves-effect waves-light btn btn-floating z-depth-3" id="home-button"><i style="text-align:center; color: black;" class="mdi-action-home"></i></a>
+          </div>
+          <div class=" col s4">
+            <a class="waves-effect waves-light btn btn-floating z-depth-3" id="menu-button"><i style="text-align:center; color: black;" class="mdi-navigation-more-vert"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class=" col s4">
+            <a class="waves-effect waves-light btn btn-floating z-depth-3" id="rewind-button"><i style="text-align:center; color: black;" class="mdi-av-fast-rewind"></i></a>
+          </div>
+          <div class=" col s4">
+            <a class="waves-effect waves-light btn btn-floating z-depth-3" id="play-button"><i style="text-align:center; color: black;" class="mdi-av-play-arrow"></i></a>
+          </div>
+          <div class=" col s4">
+            <a class="waves-effect waves-light btn btn-floating z-depth-3" id="forward-button"><i style="text-align:center; color: black;" class="mdi-av-fast-forward"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <h3 id="up-button" class="mdi-hardware-keyboard-arrow-up waves-effect waves-light btn up-arrow col s4 offset-s4 z-depth-2"></h3>
+        </div>
+        <div class="row">
+          <h3 class="mdi-hardware-keyboard-arrow-left waves-effect waves-light btn col s3 z-depth-2" id="left-button"></h3>
+          <div class="col s1">
+            <p></p>
+          </div>
+          <h3 class="waves-effect waves-light btn col s4 z-depth-2" id="select-button" style="font-size:x-large; font-weight: 600;">&#x25EF;</h3>
+          <div class="col s1">
+            <p></p>
+          </div>
+          <h3 class="mdi-hardware-keyboard-arrow-right waves-effect waves-light btn right-align col s3 z-depth-2" id="right-button"></h3>
+        </div>
+        <div class="row">
+          <h3 style="text-align:center;" class="mdi-hardware-keyboard-arrow-down waves-effect waves-light btn col s4 offset-s4 down-arrow z-depth-2"
+          id="down-button"></h3>
+        </div>
+        <md-input-container>
+          <input id="address" type="text"></input>
+          <label for="address" id="address-label">Ip Address</label>
+        </md-input-container>
+      </div>
     </div>
-    <div id="remote" class="container">
-      <h3 class="title">YARR</h3>
-      <div class="row">
-        <div class=" col s4">
-           <a class="waves-effect waves-light btn btn-floating z-depth-3" id="back-button"><i style="text-align:center; color: black;" class="mdi-navigation-arrow-back"></i></a>
-        </div>
-        <div class=" col s4">
-          <a class="waves-effect waves-light btn btn-floating z-depth-3" id="home-button"><i style="text-align:center; color: black;" class="mdi-action-home"></i></a>
-        </div>
-        <div class=" col s4">
-           <a class="waves-effect waves-light btn btn-floating z-depth-3" id="menu-button"><i style="text-align:center; color: black;" class="mdi-navigation-more-vert"></i></a>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class=" col s4">
-           <a class="waves-effect waves-light btn btn-floating z-depth-3" id="rewind-button"><i style="text-align:center; color: black;" class="mdi-av-fast-rewind"></i></a>
-        </div>
-        <div class=" col s4">
-          <a class="waves-effect waves-light btn btn-floating z-depth-3" id="play-button"><i style="text-align:center; color: black;" class="mdi-av-play-arrow"></i></a>
-        </div>
-        <div class=" col s4">
-           <a class="waves-effect waves-light btn btn-floating z-depth-3" id="forward-button"><i style="text-align:center; color: black;" class="mdi-av-fast-forward"></i></a>
-        </div>
-      </div>
-
-      <div class="row">
-        <h3 id="up-button" class="mdi-hardware-keyboard-arrow-up waves-effect waves-light btn up-arrow col s4 offset-s4 z-depth-2"></h3>
-      </div>
-      <div class="row">
-        <h3 class="mdi-hardware-keyboard-arrow-left waves-effect waves-light btn col s3 z-depth-2" id="left-button"></h3>
-        <div class="col s1"><p></p></div>
-        <h3 class="waves-effect waves-light btn col s4 z-depth-2" id="select-button" style="font-size:x-large; font-weight: 600;">&#x25EF;</h3>
-        <div class="col s1"><p></p></div>
-        <h3 class="mdi-hardware-keyboard-arrow-right waves-effect waves-light btn right-align col s3 z-depth-2" id="right-button"></h3>
-      </div>
-      <div class="row">
-        <h3 style="text-align:center;" class="mdi-hardware-keyboard-arrow-down waves-effect waves-light btn col s4 offset-s4 down-arrow z-depth-2" id="down-button"></h3>
-      </div>
-      <div class="input-field col s12" type="text">
-        <input id="address" type="text"></input>
-        <label for="address" id="address-label">Ip Address</label>
-      </div>
-    </div>
-
-    <div id="applications">
-      <h3 class="title">Applications</h3>
-      <ul id="channel-list"></ul>
-    </div>
-
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/materialize/bin/materialize.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
     <script src="javascripts/controller.js"></script>
   </body>
+
 </html>
