@@ -1,72 +1,22 @@
-html{
+html, body{
   background-color: #688AB0;
   overflow-y:auto;
 }
-#address{
-  font-weight: 200;
-  font-family: "Roboto";
-}
-#address-label{
-  font-weight: 300;
-  font-family: "Roboto";
-}
-#home-button,#back-button,#menu-button,#rewind-button,#play-button,#forward-button{
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
-}
-#address{
-  border-bottom: 1px solid #7DBCDF;
-  box-shadow: 0 1px 0 0 #7DBCDF;
-  text-align: center;
-  font-size: 32px;
-}
-#address-label, #address-label.active{
-  color: #2C405B;
-}
-.channel-item{
-  font-weight: 200;
-  font-family: "Roboto";
-  font-size: 32px;
-  text-align: right;
-  border-top: 1px solid #7DBCDF;
-  padding-top: 2px;
-}
-.channel-item img{
-  height: 200px;
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
-}
 .title{
-  font-size:44px;
-  text-align:center;
-  font-weight: 300;
-  font-family: "Roboto";
+  margin-left: 7%;
 }
-.btn, .btn-floating{
+.md-fab.md-default-theme{
   background-color: #7DBCDF;
   color: #000000;
+  margin-left: 17%;
+}
+.md-fab img{
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  display: block;
 }
 .tabs, .tab a{
   background-color: #D1DBE5;
-  color: #2C405B !important;
-}
-.indicator{
-  background-color: #2C405B !important;
-}
-.channel-pressed{
-  -webkit-animation-duration: 1s;
-  -webkit-animation-name: blink;
-}
-@-webkit-keyframes blink{
-  0%{
-    background-color: #688AB0;
-  }
-  50%{
-    background-color: #D1DBE5;
-  }
-  100%{
-    background-color: #688AB0;
-  }
+  color: #000000 !important;
 }

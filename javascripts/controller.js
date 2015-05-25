@@ -163,8 +163,11 @@
 */
 angular.module('YARR', ['ngMaterial'])
 .controller('remoteController', ['$scope', function($scope){
-
+  
 }])
 .controller('applicationsController', ['$scope', function($scope){
 
-}]);
+}])
+.config(function($mdThemingProvider){
+  $mdThemingProvider.theme('default').accentPalette('light-blue');
+});
